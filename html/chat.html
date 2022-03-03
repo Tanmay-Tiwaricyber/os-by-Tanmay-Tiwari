@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+.sidebar {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  bottom:7px;
+  background-color: grey;
+  overflow-x: hidden;
+
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  width:100%;
+  border: none;
+  color: white;
+  padding: 20px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+.button1 {
+  background-color: white; 
+  text-align:center;
+  color: black; 
+  display: inline-block;
+  border: 0.5px solid grey;
+}
+.button1 p
+{
+padding:0px 0pcx 1px 1px;
+}
+
+
+.button1:hover {
+  background-color: #90EE90 ;
+  color: black;
+}
+.button1:focus {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+img {
+  border-radius: 50%;
+}
+
+
+
+.mainbar {
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  z-index: 3;
+  top: -15px;
+  left: 240px;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 16px;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mainbar a {
+  padding: 0px 4px 20px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  
+}
+
+.mainbar a:hover {
+  color: green;
+}
+
+.mainbar b {
+  border: none;
+  
+  background-color: inherit;
+  padding: 30px 0px 10px 20px;
+  font-size: 16px;
+  display: inline-block;
+  
+ }
+.mainbar b:hover {
+  background:: #eee;
+  cursor: pointer;
+  
+}
+
+
+.mainbar c {
+  padding: 0px 4px 0px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  
+}
+
+
+.mainbar d {
+padding: 0px 4px 0px 0px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: inline-block;
+  
+}
+
+.mainbar d:hover {
+  color: green;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+  
+  
+@media screen and (max-width: 450px) {
+  .topbar {padding-top: 15px;}
+  .topbar a {font-size: 18px;}
+  
+
+</style>
+</head>
+<body>
+
+<img style="display:none;" id="bigpic" />
+
+<div class="sidebar">
+
+<button onclick="openPage('Home')" class="button button1"> <img src="amma.jpg" 
+class="img-thumbnail"  width="60" height="60"><p>sabesh</p></button>
+
+
+
+<button onclick="openPage('Document')" class="button button1">Documents</button>
+<button onclick="openPage('Games')" class="button button1">Games</button>
+<button onclick="openPage('underdev')" class="button button1">underdev</button>
+<button onclick="openPage('Home')" class="button button1">Home</button>
+<button onclick="openPage('Document')" class="button button1">Documents</button>
+<button onclick="openPage('Games')" class="button button1">Games</button>
+<button onclick="openPage('underdev')" class="button button1">underdev</button>
+<button onclick="openPage('Home')" class="button button1">Home</button>
+<button onclick="openPage('Document')" class="button button1">Documents</button>
+<button onclick="openPage('Games')" class="button button1">Games</button>
+<button onclick="openPage('underdev')" class="button button1">underdev</button>
+
+
+</div>
+
+
+
+
+<!-- Home Folder -->
+<div class="mainbar" id="Home">
+<c><d onclick="openPage('Home')"><p>Home </p></d>
+
+</c>
+
+<b><button ondblclick="openPage('Document')"><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Document</p></button></b>
+
+<b><button ondblclick="openPage('Tour')" ><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Tour</p></button></b>
+
+<b>
+<div class="sketchfab-embed-wrapper">
+    <iframe title="A 3D model" width="200" height="200" src="https://sketchfab.com/models/4d07393f253c4777ac66c7ec2887e599/embed?autostart=1&amp;preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true">
+	</iframe>
+	</div></b>
+<b>
+<div class="sketchfab-embed-wrapper">
+    <iframe title="A 3D model" width="200" height="200" src="https://sketchfab.com/models/c021bb337e2a42c58235b832144513c0/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+</b>
+
+</div>
+     
+
+<!-- Tour Folder -->
+<div class="mainbar" id="Tour">
+<c><d onclick="openPage('Home')" ><p>Home </p></d>
+<d><p>/ </p></d>
+<d onclick="openPage('Tour')"><p>Tour </p></d>
+</c>
+
+<b ><button ondblclick="showPicture()" style="cursor: pointer;"><i > <img src="amma.jpg" 
+class="img-thumbnail" alt="Cinque Terre" width="75" height="74"></i>
+
+
+<p>sabesh.jpg</p></button></b>
+
+</div>
+     
+     
+     
+     
+     
+     
+     
+<!-- Document Folder -->     
+     
+<div class="mainbar" id="Document">
+<c><d onclick="openPage('Home')" ><p>Home </p></d>
+<d><p>/ </p></d>
+<d onclick="openPage('Document')" ><p>Document </p></d>
+</c>
+<b><button ondblclick="" ><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Photos</p></button></b>
+
+<b><button ondblclick=""><i class="material-icons"  style="font-size:72px;cursor: pointer;">folder</i>
+<p>Videos</p></button></b>
+
+
+<b><button ondblclick=""><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>3D Models</p></button></b>
+
+
+<b><button ondblclick="" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>Movies</p></button></b>
+
+
+
+
+</div>     
+
+
+
+
+<!-- Games folder-->
+
+<div class="mainbar" id="Games">
+<c><d ><p>Games </p></d>
+</c>
+<b><button ondblclick="" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>2D</p></button></b>
+
+<b><button ondblclick="" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>3D</p></button></b>
+
+</div>     
+
+
+
+
+<!-- underdev Folder -->
+<div class="mainbar" id="underdev">
+<c><d href="#home" ><p>underdev </p></d>
+</c>
+<b><button ondblclick="demo()" ><i class="material-icons" style="font-size:72px;cursor: pointer;">folder</i>
+<p>demo</p></button></b>
+
+</div>     
+
+
+<script>
+function openPage(pageName) {
+  var i;
+  tabcontent = document.getElementsByClassName("mainbar");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  
+  document.getElementById(pageName).style.display = "block";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("Default").click();
+
+
+
+function demo() {
+  var password = prompt("Please enter Password:");
+  if (password == "My_Wife_Name") {
+  alert("...Unlocked...");
+    
+  } else
+  {
+  alert("Wrong Password");
+  }
+}
+
+
+
+function goBack() {
+  window.history.back();
+}
+
+
+
+function gonext() {
+  window.history.forward();
+}
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+function showPicture() {
+  
+  var sourceOfPicture = "amma.jpg";
+  window.open(sourceOfPicture,'_top')
+  var img = document.getElementById('bigpic')
+} 
+
+
+
+</script>
+
+
+</body>
+</html> 
