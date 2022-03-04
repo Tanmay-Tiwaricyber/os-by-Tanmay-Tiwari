@@ -1,36 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<html lang="en"><head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>TANMAY TIWARI</title>
-		<link
-			href="https://fonts.googleapis.com/css?family=Open+Sans"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css?family=Oxygen+Mono"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-			rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="css/calc.css" />
-		<link rel="stylesheet" href="css/todo.css" />
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/calc.css">
+		<link rel="stylesheet" href="css/todo.css">
 	</head>
 	<body class="disable-select">
-		<div id="starting-win">
+		<div id="starting-win" style="display: none;">
 			<!-- <div style="width:100%; height:100%; text-align:center; background:black;" id="black-screen"></div> -->
-			<img src="img/icon_windows_blue.png" alt="Starting Windows" /><br />
-			<div class="ring">
+			<img src="img/icon_windows_blue.png" alt="Starting Windows" style="display: none;"><br>
+			<div class="ring" style="visibility: visible; display: none;">
 				<div class="indicator-1  indeterminate-ring"></div>
 				<div class="indicator-2  indeterminate-ring"></div>
 				<div class="indicator-3  indeterminate-ring"></div>
@@ -39,107 +25,70 @@
 			</div>
 		</div>
 		<div id="loader">
-			<i
-				class="fa fa-cog fa-spin fa-3x fa-fw"
-				style="color: rgba(162, 162, 162, 0.5)"
-			></i>
+			<i class="fa fa-cog fa-spin fa-3x fa-fw" style="color: rgba(162, 162, 162, 0.5)"></i>
 			<span class="sr-only">STARTING OS...</span>
 		</div>
 
-		<div id="main" contextmenu="alert('Not Allowed, Sorry!')">
+		<div id="main" contextmenu="alert('Not Allowed, Sorry!')" style="background-image: url(&quot;img/wallpapers/7.jpg&quot;);">
 			<!-- This PC -->
-			<div
-				title="This PC"
-				class="desktop-item"
-				ondblclick="$('#tab').show(); $('.desktop-item').css('background-color','transparent');"
-				onmouseover="hoveredItem(this)"
-				onmouseout="hoveredOut(this)"
-				onclick="selectedItem(this)"
-			>
-				<img src="img/this-pc.png" alt="This PC" />
-				<p id="name">This PC</p>
+			<div title="This PC" class="desktop-item" ondblclick="$('#tab').show(); $('.desktop-item').css('background-color','transparent');" onmouseover="hoveredItem(this)" onmouseout="hoveredOut(this)" onclick="selectedItem(this)" style="background: transparent;">
+				<img src="img/this-pc.png" alt="This PC">
+				<p id="name">My PC</p>
 			</div>
 
 			<!-- Calculator -->
-			<div
-				title="Calculator"
-				class="desktop-item"
-				ondblclick="$('#tab-calc').show(); $('.desktop-item').css('background-color','transparent');"
-				onmouseover="hoveredItem(this)"
-				onmouseout="hoveredOut(this)"
-				onclick="selectedItem(this)"
-			>
-				<img src="img/calculator.png" alt="Calculator" />
-				<p>Games</p>
-			</div>
+			
 
 			<!-- Todo App -->
 			
 			
-			<div
-				title="Nothing"
-				class="desktop-item"
-				ondblclick="$('#tab-todo').show(); $('.desktop-item').css('background-color','transparent');"
-				onmouseover="hoveredItem(this)"
-				onmouseout="hoveredOut(this)"
-				onclick="selectedItem(this)"
-			>
-				<img src="img/Chat.png" alt="This PC" />
+			<div title="Nothing" class="desktop-item" ondblclick="$('#tab-todo').show(); $('.desktop-item').css('background-color','transparent');" onmouseover="hoveredItem(this)" onmouseout="hoveredOut(this)" onclick="selectedItem(this)" style="background: transparent;">
+				<img src="img/Chat.png" alt="This PC">
 				<p id="name">Chat</p>
 			</div>
 			
 		</div>
 
 		<div id="start-bar">
-			<div
-				title="Option to logout or close the tab"
-				class="win-icon"
-				onclick="$('#logOut').toggle().fadein(5000);"
-			></div>
+			<div title="Option to logout or close the tab" class="win-icon" onclick="$('#logOut').toggle().fadein(5000);"></div>
 			
 			<div title="fullscreen" id="fullscreen" onclick="toggleFullScreen()">
-				<i class="material-icons" style="font-size:36px" <input type="button" value="fullscreen" >
+				<i class="material-icons" style="font-size:36px" <input="" type="button" value="fullscreen">
 				fullscreen</i>
 			</div>
 			
-			<div title="Current date and time" id="clock">
-				<i
-					class="fa fa-spinner fa-spin fa-3x fa-fw"
-					style="color: rgba(255, 255, 255, 0.5)"
-				></i>
-				<span class="sr-only">Loading...</span>
-			</div>
+			<div title="Current date and time" id="clock">10:24 PM<br>3/4/2022</div>
 		</div>
 
-		<div id="tab" >
+		<div id="tab" style="display: none;">
 			<div id="tab-header" class="tab-header">
 				This PC <i class="fa fa-times" onclick="$('#tab').hide()"></i>
-			</div> <br/>
+			</div> <br>
 			
 			
 			<div class="tab-middle">
-			<iframe class="resp-iframe" src="html/extend1.html" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+			<iframe class="resp-iframe" src="html/extend1.html" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
 			</div>
 			
 			<div id="tab-footer">
 				9 folders, 5 files, 5.00 MBss
 			</div>
 		</div>
-		<div id="tab-calc">
+		<div id="tab-calc" style="display: none;">
 			<div id="tab-calc-header" class="tab-header">
 				Games
 				<i class="fa fa-times" onclick="$('#tab-calc').hide(); cls();"></i>
 			</div>
 			
 			
-			<div class="tab-middle-chats2" >
+			<div class="tab-middle-chats2">
 			<iframe class="resp2-iframe" src="html/chat.html"></iframe>
 			</div>
 			
 		</div>
 		
 		
-		<div id="tab-todo">
+		<div id="tab-todo" style="display: none;">
 			<div id="tab-todo-header" class="tab-header">
 				Chats <i class="fa fa-times" onclick="$('#tab-todo').hide();"></i>
 			</div>
@@ -154,27 +103,24 @@
 		
 
 		<!-- The Logout (Windows Button) Part -->
-		<div id="logOut">
+		<div id="logOut" style="display: block;">
 			<div id="logout-btn">
 				
 				<button onclick="javascript:self.close()">Close Window (No-Logout)</button>
-				<br />
-				<br />
-				<br />
-				<button onClick="$('#logOut').fadeOut();localStorage.clear();alert('success');window.location.reload();"
-				>
+				<br>
+				<br>
+				<br>
+				<button onclick="$('#logOut').fadeOut();localStorage.clear();alert('success');window.location.reload();">
 					Logout</button>
-				<br/>
+				<br>
 			</div>
 			
 		</div>
 
 		<!-- Right Click Options -->
-		<div class="hide" id="body-rmenu">
+		<div class="" id="body-rmenu" style="position: absolute; top: 648px; left: 795px;">
 			<ul>
-			    <li
-					onclick="location.reload();"
-				>
+			    <li onclick="location.reload();">
 					refresh
 				</li>
 				<li id="blaah">
@@ -192,9 +138,7 @@
 						<li onclick="changeBg(5)">Night</li>
 					</ul>
 				</li>
-				<li
-					onclick="alert('Tanmay Tiwari OS is Like web-based operating system made using HTML, CSS, Javascript And \nThis is made by Tanmay Tiwari \nHave a great day!')"
-				>
+				<li onclick="alert('Tanmay Tiwari OS is Like web-based operating system made using HTML, CSS, Javascript And \nThis is made by Tanmay Tiwari \nHave a great day!')">
 					About Tanmay Tiwari
 				</li>
 				
@@ -203,5 +147,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="script.js"></script>
-	</body>
-</html>
+	
+
+</body></html>
